@@ -32,12 +32,18 @@ namespace Derp
 		ParallaxingBackground bgLayer1;
 		ParallaxingBackground bgLayer2;
 
+		// The music played during gameplay
+		public Song gameplayMusic;
+		public Song trapSong;
+
+		SoundEffect explosionSound;
+
 		// Enemies
 		Texture2D enemyTexture;
 		List<Enemy> enemies;
 
 		// The rate at which the enemies appear
-		TimeSpan enemySpawnTime;
+		public TimeSpan enemySpawnTime;
 		TimeSpan previousSpawnTime;
 
 		Texture2D explosionTexture;
@@ -47,6 +53,8 @@ namespace Derp
 		int score;
 		// The font used to display UI elements
 		SpriteFont font;
+
+		private bool bassDrop;
 
 		// A random number generator
 		Random random;
@@ -99,10 +107,12 @@ namespace Derp
 			previousSpawnTime = TimeSpan.Zero;
 
 			// Used to determine how fast enemy respawns
-			enemySpawnTime = TimeSpan.FromSeconds(score/100);
+			enemySpawnTime = TimeSpan.FromSeconds(0.5);
 
 			// Initialize our random number generator
 			random = new Random();
+
+			bassDrop = true;
 
 			base.Initialize();
 		}
@@ -138,6 +148,14 @@ namespace Derp
 
 			explosionTexture = Content.Load<Texture2D>("Animation/explosion");
 			mainBackground = Content.Load<Texture2D>("Texture/mainbackground");
+
+			explosionSound = Content.Load<SoundEffect>("Sound/explosion");
+
+			gameplayMusic = Content.Load<Song>("Sound/iphone");
+			trapSong = Content.Load<Song>("Sound/trapSong");
+
+			// Start the music right away
+			PlayMusic(gameplayMusic);
 		}
 
 		/// <summary>
@@ -180,6 +198,23 @@ namespace Derp
 
 			// Update the explosions
 			UpdateExplosions(gameTime);
+
+			// Update Increase Difficulty
+
+			// Update Bass Inhance
+			if (gameTime.TotalGameTime > TimeSpan.FromSeconds(26.4) && bassDrop)
+			{
+				bassDrop = false;
+				BassEnhance bassEnhance = new BassEnhance(this);
+				bassEnhance.DoBassEnhance();
+			}
+
+            if(currentKeyboardState.IsKeyDown(Keys.H))
+			{
+				bassDrop = false;
+				IncreaseDifficulty increaseDifficulty = new IncreaseDifficulty(this);
+				increaseDifficulty.increaseDifficulty();
+			}
 
 			base.Update(gameTime);
 		}
@@ -301,7 +336,7 @@ namespace Derp
 			catch { }
 		}
 
-		private void AddEnemy()
+		public void AddEnemy()
 		{
 			// Create the animation object
 			Animation enemyAnimation = new Animation();
@@ -346,6 +381,9 @@ namespace Derp
 						// Add an explosion
 						AddExplosion(enemies[i].Position);
 
+
+						explosionSound.Play(0.5f, -1f, 0f);
+
 						//Add to the player's score
 						score += enemies[i].Value;
 					}
@@ -379,7 +417,7 @@ namespace Derp
 			(int)player.Position.Y,
 			player.Width,
 			player.Height);
-			
+
 			// Do the collision between the player and the enemies
 			for (int i = 0; i < enemies.Count; i++)
 			{
@@ -422,7 +460,7 @@ namespace Derp
 					// Determine if the two objects collided with each other
 					if (rectangle1.Intersects(rectangle2))
 					{
-						enemies[j].Health -= (projectiles[i].Damage/3);
+						enemies[j].Health -= (projectiles[i].Damage / 3);
 						projectiles[i].Active = false;
 					}
 				}

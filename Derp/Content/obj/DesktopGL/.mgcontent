@@ -4,23 +4,24 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/mainMenu.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/mine.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/player.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/bgLayer1.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/bgLayer2.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/endMenu.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/laser.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Texture/mainbackground.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Animation/mineAnimation.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Animation/shipAnimation.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Animation/explosion.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Font/gameFont.spritefont</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Sound/explosion.wav</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Sound/gameMusic.mp3</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Sound/laserFire.wav</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Sound/menuMusic.mp3</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Animation/llama.png</File>
-    <File>/Users/ibow9416/Documents/projects/derp/Derp/Content/Animation/6 (1).png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/mainMenu.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/mine.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/player.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/bgLayer1.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/bgLayer2.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/endMenu.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/laser.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Texture/mainbackground.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Animation/mineAnimation.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Animation/shipAnimation.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Animation/explosion.png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Font/gameFont.spritefont</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Sound/explosion.wav</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Sound/gameMusic.mp3</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Sound/laserFire.wav</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Sound/menuMusic.mp3</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Animation/6 (1).png</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Sound/iphone.mp3</File>
+    <File>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Sound/trapSong.mp3</File>
   </SourceFiles>
 </SourceFileCollection>

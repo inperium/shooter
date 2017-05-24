@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/Users/ibow9416/Documents/projects/derp/Derp/Content/Sound/explosion.wav</SourceFile>
+  <SourceFile>/Users/ibow9416/Documents/projects/shooter/Derp/Content/Sound/explosion.wav</SourceFile>
   <SourceTime>2017-05-08T11:06:46-06:00</SourceTime>
-  <DestFile>/Users/ibow9416/Documents/projects/derp/Derp/Content/bin/DesktopGL/Sound/explosion.xnb</DestFile>
-  <DestTime>2017-05-08T12:13:54-06:00</DestTime>
+  <DestFile>/Users/ibow9416/Documents/projects/shooter/Derp/Content/bin/DesktopGL/Sound/explosion.xnb</DestFile>
+  <DestTime>2017-05-19T11:46:52-06:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2017-03-01T08:06:24-07:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

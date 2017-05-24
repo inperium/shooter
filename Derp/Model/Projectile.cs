@@ -45,6 +45,8 @@ namespace Derp
 			Position = position;
 			this.viewport = viewport;
 
+
+
 			Active = true;
 
 			Damage = 20;
